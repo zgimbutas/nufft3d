@@ -1,0 +1,46 @@
+This directory contains Fortran code for the 3D NUFFT.
+
+It is asymptotically fast, but the performance
+of this library is noticeably worse than that of the FFT.
+Significant (but understood) implementation effort are
+required to accelerate this code.
+
+dirft3d.f contains direct evaluation schemes for verification/testing.
+
+nufft3df90.f contains NUFFT routines of types 1,2,3 with dynamic F90 
+workspace allocation.
+
+nufft3df77.f contains NUFFT routines of types 1,2,3 with static F77 
+workspace allocation in the calling (driver) routine.
+
+next235.f contains a utility routine that finds a highly composite 
+integer greater than a given number. 
+IT IS THE SAME AS THE ROUTINE PROVIDED IN THE 1D LIBRARY.
+
+dfftpack.f contains a double precision FFT package from Netlib.
+
+nufft3d_demof77.f contains a sample driver routine for the F77
+versions of the codes. 
+
+nufft3d_demof90.f contains the analogous driver for the F90
+versions of the codes.
+
+------------------------------------------------------------------
+Simply compile 
+
+nufft3d_demof90.f nufft3df90.f dirft3d.f dfftpack.f next235.f
+
+or
+
+nufft3d_demof77.f nufft3df77.f dirft3d.f dfftpack.f next235.f
+
+
+Release notes:
+c
+c  NUFFT 1.2 : Jan 24, 2009.
+c              First external release.
+c
+c  NUFFT 1.3 : Nov 28, 2011.
+c              Adjust parameters and constants for double/quad precision.
+c              Add Matlab/Octave wrappers and mex files.
+c
