@@ -3,9 +3,9 @@ function fk=dirft3d3(nj,xj,yj,zj,cj,iflag,nk,sk,tk,uk)
 %
 %  FK = DIRFT3D3(NJ,XJ,YJ,ZJ,CJ,IFLAG,NK,SK,TK,UK);
 %
-%                 1  nj
-%     fk(k)    = -- SUM cj(j) exp(+/-i (s(k),t(k),u(k))*(xj(j),yj(j),zj(j)))
-%                nj j=1
+%                  nj
+%     fk(k)    =  SUM cj(j) exp(+/-i (s(k),t(k),u(k))*(xj(j),yj(j),zj(j)))
+%                 j=1
 %
 %     If (iflag .ge.0) the + sign is used in the exponential.
 %     If (iflag .lt.0) the - sign is used in the exponential.
