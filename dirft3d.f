@@ -2,7 +2,7 @@ cc Copyright (C) 2004-2009: Leslie Greengard and June-Yub Lee
 cc Contact: greengard@cims.nyu.edu
 cc 
 cc This software is being released under a FreeBSD license
-cc (see license.txt in this directory). 
+cc (see COPYING in this directory). 
 cc
 ************************************************************************
       subroutine dirft3d1(nj,xj,yj,zj,cj,iflag,ms,mt,mu,fk)
